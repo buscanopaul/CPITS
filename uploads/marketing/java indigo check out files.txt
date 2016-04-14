@@ -1,0 +1,5 @@
+-svn repositories upper right side
+
+-right click new then link
+
+-checkout

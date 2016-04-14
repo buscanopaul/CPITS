@@ -1,0 +1,58 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x6eed7ee7, pid=3776, tid=3784
+#
+# JRE version: 6.0_34-b04
+# Java VM: Java HotSpot(TM) Client VM (20.9-b04 mixed mode, sharing windows-x86 )
+# Problematic frame:
+# C  [libapr-1.dll+0x17ee7]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x01839800):  JavaThread "main" [_thread_in_native, id=3784, stack(0x00030000,0x00130000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x00000000 0x000305e4 
+
+Registers:
+EAX=0x00002008, EBX=0x00000000, ECX=0x000305e4, EDX=0x3eeeb550
+ESP=0x000325dc, EBP=0x000325e4, ESI=0x00000000, EDI=0x00000000
+EIP=0x6eed7ee7, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x000325dc)
+0x000325dc:   00100000 6eec4aed 00032614 6eec3daf
+0x000325ec:   00032610 3eeeb550 00100000 00000fff
+0x000325fc:   3eeeb360 00036bdc 00000000 00000100
+0x0003260c:   00000000 00000000 00036b9c 6eec3a89
+0x0003261c:   00036bdc 3eeeb550 00000100 3eeeb360
+0x0003262c:   00036c64 3eeeb360 3eeeb550 00000000
+0x0003263c:   00000000 00000000 00000000 00000000
+0x0003264c:   00000000 00000000 00000000 00000000 
+
+Instructions: (pc=0x6eed7ee7)
+0x6eed7ec7:   25 14 93 ed 6e cc cc cc cc 51 3d 00 10 00 00 8d
+0x6eed7ed7:   4c 24 08 72 14 81 e9 00 10 00 00 2d 00 10 00 00
+0x6eed7ee7:   85 01 3d 00 10 00 00 73 ec 2b c8 8b c4 85 01 8b
+0x6eed7ef7:   e1 8b 08 8b 40 04 50 c3 83 3d 0c 15 ee 6e ff 75 
+
+
+Register to memory mapping:
+
+EAX=0x00002008 is an unknown value
+EBX=0x00000000 is an unknown value
+ECX=0x000305e4 is pointing into the stack for thread: 0x01839800
+EDX=0x3eeeb550 is an unknown value
+ESP=0x000325dc is pointing into the stack for thread: 0x01839800
+EBP=0x000325e4 is pointing into the stack for thread: 0x01839800
+ESI=0x00000000 is an unknown value
+EDI=0x00000000 is an unknown value
+
+
+Stack: [0x00030000,0x00130000],  sp=0x000325dc,  free space=9k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
